@@ -77,8 +77,22 @@
             position: relative;
             overflow: hidden;
         }
+        
+        /* Added a dark overlay for better text readability */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
 
         .hero-content {
+            position: relative; /* Changed from z-index: 2 for consistency */
             z-index: 2;
             animation: fadeInUp 1s ease;
         }
@@ -119,6 +133,7 @@
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
             animation: float 6s ease-in-out infinite;
+            z-index: 2; /* Ensure they are above the overlay */
         }
 
         .floating-element:nth-child(1) {
@@ -448,7 +463,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <nav class="container">
             <div class="logo">LP</div>
@@ -465,8 +479,7 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;">
         <div class="floating-element"></div>
         <div class="floating-element"></div>
         <div class="floating-element"></div>
@@ -477,7 +490,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section-light">
         <div class="container">
             <h2 class="section-title">About Me</h2>
@@ -494,7 +506,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
@@ -563,7 +574,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="section-light">
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
@@ -597,7 +607,6 @@
         </div>
     </section>
 
-    <!-- Education Section -->
     <section id="education">
         <div class="container">
             <h2 class="section-title">Education</h2>
@@ -621,7 +630,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio" class="section-light">
         <div class="container">
             <h2 class="section-title">Portfolio Projects</h2>
@@ -709,7 +717,6 @@
         </div>
     </section>
 
-    <!-- Activities Section -->
     <section id="activities">
         <div class="container">
             <h2 class="section-title">Professional Activities & Interests</h2>
@@ -748,7 +755,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="contact-content">
