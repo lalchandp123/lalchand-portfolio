@@ -304,6 +304,69 @@
             margin-bottom: 1rem;
         }
 
+        /* Portfolio Section */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .portfolio-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-item h4 {
+            color: #764ba2;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .portfolio-item p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: rgba(118, 75, 162, 0.1);
+            color: #764ba2;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -395,6 +458,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#activities">Activities</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -466,11 +530,6 @@
                     <p>Version control, collaboration, and code management</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🌸</div>
-                    <h4>Spring</h4>
-                    <p>Spring Framework, Spring Boot, Dependency Injection</p>
-                </div>
-                <div class="skill-card">
                     <div class="skill-icon">🔗</div>
                     <h4>Hibernate</h4>
                     <p>ORM framework, JPA, database mapping and relationships</p>
@@ -512,7 +571,7 @@
                 <div class="experience-item">
                     <h4>Java Software Developer</h4>
                     <div class="date">May 2022 - Present | NOI Technologies Pvt Ltd</div>
-                    <p>Working as a Java Software Developer specializing in backend development using Java, Spring, Hibernate, and other modern technologies.</p>
+                    <p>Working as a Java Software Developer specializing in backend development using Java, Hibernate, and other modern technologies.</p>
                     <ul style="margin-top: 1rem; color: #666;">
                         <li>Optimized REST API creation using Moqui, Apache OFBiz, Groovy, and Java</li>
                         <li>Designed and built RESTful APIs to enable seamless integrations and expose key endpoints</li>
@@ -530,7 +589,7 @@
                     <ul style="margin-top: 1rem; color: #666;">
                         <li>Mastered core Java concepts and OOP principles</li>
                         <li>Gained expertise in SQL databases and query optimization</li>
-                        <li>Learned Spring Framework and Hibernate ORM</li>
+                        <li>Learned Hibernate ORM and database technologies</li>
                         <li>Developed proficiency in Git version control and debugging</li>
                     </ul>
                 </div>
@@ -550,20 +609,108 @@
                 </div>
                 <div class="experience-item">
                     <h4>Senior Secondary in PCM</h4>
-                    <div class="date">2017 | JSB Public School</div>
+                    <div class="date">2018 | JSB Public School</div>
                     <p>Completed senior secondary education with Physics, Chemistry, and Mathematics, building analytical and problem-solving skills.</p>
                 </div>
                 <div class="experience-item">
                     <h4>Higher Secondary</h4>
-                    <div class="date">2015 | JSB Public School</div>
+                    <div class="date">2016 | JSB Public School</div>
                     <p>Completed higher secondary education with strong academic performance and foundational knowledge.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-light">
+        <div class="container">
+            <h2 class="section-title">Portfolio Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        🏪
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>SmartCity 24/7 Mobile App</h4>
+                        <p>Contributed to a comprehensive mobile application for smart city services, enabling 24/7 access to various municipal services and facilities for citizens.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Moqui Framework</span>
+                            <span class="tag">REST APIs</span>
+                            <span class="tag">Mobile Backend</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        📦
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>FulfillmentPlus Enterprise Solution</h4>
+                        <p>Developed backend solutions for an enterprise fulfillment platform, optimizing order processing workflows and inventory management systems.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Apache OFBiz</span>
+                            <span class="tag">Enterprise Systems</span>
+                            <span class="tag">Database Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        🛍️
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>NOGIN E-commerce Platform</h4>
+                        <p>Built scalable backend APIs and services for a modern e-commerce platform, focusing on performance optimization and user experience enhancements.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">RESTful APIs</span>
+                            <span class="tag">Database Design</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        🎰
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>Tapp Online Betting Platform</h4>
+                        <p>Developed robust backend infrastructure for an online betting platform, implementing secure APIs, payment processing, and real-time data handling for betting operations.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Groovy</span>
+                            <span class="tag">API Development</span>
+                            <span class="tag">Betting Platform</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        🎯
+                    </div>
+                    <div class="portfolio-content">
+                        <h4>SmartCity Advertisement Management</h4>
+                        <p>Designed and implemented advertisement image management system for the SmartCity project with robust content handling and optimization features.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Image Processing</span>
+                            <span class="tag">Content Management</span>
+                            <span class="tag">SmartCity Platform</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Activities Section -->
-    <section id="activities" class="section-light">
+    <section id="activities">
         <div class="container">
             <h2 class="section-title">Professional Activities & Interests</h2>
             <div class="skills-grid">
@@ -608,19 +755,23 @@
                 <h2 class="section-title" style="color: white;">Let's Work Together</h2>
                 <p style="font-size: 1.1rem; margin-bottom: 2rem;">Ready to bring your Java projects to life? Let's discuss how I can contribute to your team.</p>
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item" onclick="window.open('mailto:lalchandp393@gmail.com', '_blank')" style="cursor: pointer;">
                         <h4>📧 Email</h4>
                         <p>lalchandp393@gmail.com</p>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item" onclick="window.open('https://www.linkedin.com/in/lalchand-prajapat-844728251', '_blank')" style="cursor: pointer;">
                         <h4>💼 LinkedIn</h4>
                         <p>www.linkedin.com/in/lalchand-prajapat-844728251</p>
+                    </div>
+                    <div class="contact-item" onclick="window.open('https://lalchandp123.github.io/lalchand-portfolio/', '_blank')" style="cursor: pointer;">
+                        <h4>🎯 Portfolio</h4>
+                        <p>View my complete portfolio and project showcase</p>
                     </div>
                     <div class="contact-item">
                         <h4>📍 Location</h4>
                         <p>Jaipur, Rajasthan, India</p>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item" onclick="window.open('tel:+917891867859', '_blank')" style="cursor: pointer;">
                         <h4>📱 Phone</h4>
                         <p>+91 7891867859</p>
                     </div>
@@ -645,14 +796,12 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
             }
         });
 
-        // Animate skill cards on scroll
+        // Add scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -667,12 +816,12 @@
             });
         }, observerOptions);
 
-        // Observe skill cards and experience items
-        document.querySelectorAll('.skill-card, .experience-item').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(card);
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
         });
     </script>
 </body>
